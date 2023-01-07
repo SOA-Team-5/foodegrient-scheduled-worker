@@ -16,33 +16,6 @@ module Foodegrient
     def call
       puts "REPORT DateTime: #{Time.now}"
       DBContent::TopMapper.new().update()
-      # Notify administrator of unique clones
-      # if cloned_projects.any?
-      #   # TODO: Email administrator instead of printing to STDOUT
-      #   puts "\tNumber of unique repos cloned: #{cloned_projects.count}"
-      #   puts "\tTotal disk space: #{total_size}"
-      # else
-      #   puts "\tNo cloning reported in this period"
-      # end
     end
-
-    # def cloned_projects
-    #   return @cloned_projects if @cloned_projects
-
-    #   @cloned_projects = {}
-    #   @queue.poll do |clone_request_json|
-    #     clone_request = Representer::CloneRequest
-    #       .new(OpenStruct.new)
-    #       .from_json(clone_request_json)
-    #     @cloned_projects[clone_request.project.origin_id] = clone_request.project
-    #     print '.'
-    #   end
-
-      # @cloned_projects.tap { puts }
-    # end
-
-    # def total_size
-    #   cloned_projects.values.reduce(0) { |size, project| size + project.size }
-    # end
   end
 end
