@@ -1,5 +1,9 @@
 FROM chillmelon/ruby-http:3.1.3-alpine
 
-COPY app app
+WORKDIR worker
 
-WORKDIR app
+COPY / .
+
+RUN bundle install
+
+CMD rake worker
