@@ -1,4 +1,4 @@
-FROM chillmelon/ruby-http:3.1.3-alpine
+FROM chillmelon/ruby-http:3.1.2
 
 WORKDIR worker
 
