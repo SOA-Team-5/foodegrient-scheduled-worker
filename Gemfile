@@ -12,3 +12,8 @@ gem 'aws-sdk-sqs', '~> 1.48'
 # Representers
 gem 'multi_json'
 gem 'roar'
+
+## database
+gem 'sequel', '~> 5.49'
+gem 'pg'
+gem 'redis', '~> 4.8'
